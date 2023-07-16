@@ -28,15 +28,15 @@ public class UserTests {
         response = given()
                 .baseUri("https://gorest.co.in/public/v2/")
                 .when()
-                .basePath("/users")
-                .get();
+                    .basePath("/users")
+                    .get();
 
         assertThat(response.statusCode(), equalTo(200));
     }
 
     @Test
     public void testGetSingleUser() {
-        var valid_user = new User(3681834, "Som Embranthiri III", "iii_som_embranthiri@jacobi.test", "female", "inactive");
+        var valid_user = new User(3681803, "Himadri Abbott", "abbott_himadri@gibson-kunde.example", "male", "inactive");
 
         response = given()
                 .baseUri("https://gorest.co.in/public/v2/")
@@ -58,8 +58,8 @@ public class UserTests {
     @Test
     public void testCreateNewUser() {
         User new_user = new User(
-                "New User",
-                "new.user@automation.com",
+                "Another User",
+                "another.user@automation.com",
                 "male",
                 "active"
         );
@@ -97,7 +97,7 @@ public class UserTests {
                 .header("Authorization", "Bearer c40da3c265404cce4faa7630c1900fb093833bfff182e24f453737a1dcfb7d48")
                 .body(updated_user)
                 .when()
-                .put("/2135");
+                .put("/3681803");
 
         var expected_user = response.as(User.class);
 
@@ -114,7 +114,7 @@ public class UserTests {
                 .contentType(ContentType.JSON)
                 .header("Authorization", "Bearer c40da3c265404cce4faa7630c1900fb093833bfff182e24f453737a1dcfb7d48")
                 .when()
-                .delete("/2137");
+                .delete("/3681803");
 
         assertThat(response.statusCode(), equalTo(204));
     }
