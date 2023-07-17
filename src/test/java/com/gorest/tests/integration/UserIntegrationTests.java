@@ -3,7 +3,6 @@ package com.gorest.tests.integration;
 import com.gorest.api.UserApi;
 import com.gorest.models.User;
 import io.qameta.allure.Owner;
-import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
@@ -13,7 +12,6 @@ import jdk.jfr.Description;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 

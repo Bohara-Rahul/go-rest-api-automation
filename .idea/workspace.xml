@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49a6e11e-5733-4c23-8b3f-104f83521603" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/gorest/api/UserApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/gorest/api/PostApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/gorest/tests/CRUD/PostTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gorest/tests/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gorest/tests/UserTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gorest/tests/CRUD/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gorest/tests/CRUD/UserTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/gorest/tests/integration/UserIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gorest/tests/integration/UserIntegrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +45,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.UserIntegrationTests">
+  <component name="RunManager" selected="TestNG.PostTests.testGetListOfPosts">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="GoRest API Automation" />
       <method v="2">
@@ -55,6 +55,24 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="GoRest API Automation" />
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostTests.testGetListOfPosts" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="GoRestAPIAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gorest.tests.CRUD.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gorest.tests.CRUD" />
+      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.CRUD.PostTests" />
+      <option name="METHOD_NAME" value="testGetListOfPosts" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,31 +166,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTests.testUpdateUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="GoRestAPIAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.gorest.tests.CRUD.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.gorest.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.CRUD.UserTests" />
-      <option name="METHOD_NAME" value="testUpdateUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.PostTests.testGetListOfPosts" />
         <item itemvalue="TestNG.UserIntegrationTests" />
         <item itemvalue="TestNG.UserIntegrationTests.testCreateNewUser" />
         <item itemvalue="TestNG.UserTests.testGetSingleUser" />
         <item itemvalue="TestNG.UserTests.testDeleteUser" />
-        <item itemvalue="TestNG.UserTests.testUpdateUser" />
       </list>
     </recent_temporary>
   </component>
