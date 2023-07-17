@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49a6e11e-5733-4c23-8b3f-104f83521603" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/gorest/api/UserApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/gorest/tests/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gorest/tests/UserTests.java" afterDir="false" />
@@ -76,16 +76,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTests.testCreateNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserIntegrationTests.testCreateNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="GoRestAPIAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gorest.tests.*" />
+          <option name="PATTERN" value="com.gorest.tests.integration.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.gorest.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.UserTests" />
+      <option name="PACKAGE_NAME" value="com.gorest.tests.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.integration.UserIntegrationTests" />
       <option name="METHOD_NAME" value="testCreateNewUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -98,12 +98,12 @@
       <module name="GoRestAPIAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gorest.tests.*" />
+          <option name="PATTERN" value="com.gorest.tests.CRUD.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.gorest.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.UserTests" />
+      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.CRUD.UserTests" />
       <option name="METHOD_NAME" value="testDeleteUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -116,12 +116,12 @@
       <module name="GoRestAPIAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gorest.tests.*" />
+          <option name="PATTERN" value="com.gorest.tests.CRUD.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.gorest.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.UserTests" />
+      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.CRUD.UserTests" />
       <option name="METHOD_NAME" value="testGetListOfUsers" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -134,12 +134,12 @@
       <module name="GoRestAPIAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gorest.tests.*" />
+          <option name="PATTERN" value="com.gorest.tests.CRUD.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.gorest.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.UserTests" />
+      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.CRUD.UserTests" />
       <option name="METHOD_NAME" value="testGetSingleUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -152,12 +152,12 @@
       <module name="GoRestAPIAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.gorest.tests.*" />
+          <option name="PATTERN" value="com.gorest.tests.CRUD.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.gorest.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.UserTests" />
+      <option name="MAIN_CLASS_NAME" value="com.gorest.tests.CRUD.UserTests" />
       <option name="METHOD_NAME" value="testUpdateUser" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -169,10 +169,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.UserIntegrationTests" />
+        <item itemvalue="TestNG.UserIntegrationTests.testCreateNewUser" />
+        <item itemvalue="TestNG.UserTests.testGetSingleUser" />
         <item itemvalue="TestNG.UserTests.testDeleteUser" />
         <item itemvalue="TestNG.UserTests.testUpdateUser" />
-        <item itemvalue="TestNG.UserTests.testCreateNewUser" />
-        <item itemvalue="TestNG.UserTests.testGetSingleUser" />
       </list>
     </recent_temporary>
   </component>

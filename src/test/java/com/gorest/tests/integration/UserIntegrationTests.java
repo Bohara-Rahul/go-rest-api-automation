@@ -1,5 +1,6 @@
 package com.gorest.tests.integration;
 
+import com.gorest.api.UserApi;
 import com.gorest.models.User;
 import io.qameta.allure.Owner;
 import io.restassured.http.ContentType;
@@ -27,19 +28,13 @@ public class UserIntegrationTests {
     @Description("Verify that the user can be created")
     public void testCreateNewUser(ITestContext iTestContext) {
         User new_user = new User(
-                "Another User",
-                "another.user@automation.com",
+                "John",
+                "john@automation.com",
                 "male",
                 "active"
         );
 
-        response = given()
-                .baseUri("https://gorest.co.in/public/v2/")
-                .header("Authorization", "Bearer c40da3c265404cce4faa7630c1900fb093833bfff182e24f453737a1dcfb7d48")
-                .contentType(ContentType.JSON)
-                .body(new_user)
-                .when()
-                    .post("users");
+        response = UserApi.post(new_user);
 
         var user_id = JsonPath.from(response.asString()).getString("id");
         iTestContext.setAttribute("id", user_id);
@@ -55,16 +50,12 @@ public class UserIntegrationTests {
 
     @Test(groups = "integration", dependsOnMethods = "testCreateNewUser")
     @Owner("Rahul Bohara")
-    @Description("Verify that the details of the user can be queried")
+    @Description("Verify that the details of the user can be returned")
     public void testGetSingleUser(ITestContext iTestContext) {
         var id = (Integer) iTestContext.getAttribute("id");
         var valid_user = new User(id, "Himadri Abbott", "abbott_himadri@gibson-kunde.example", "male", "inactive");
 
-        response = given()
-                .baseUri("https://gorest.co.in/public/v2/")
-                .when()
-                .basePath("/users/" + valid_user.getId())
-                .get();
+        response = UserApi.get(valid_user.getId());
 
         User expected_user = response.as(User.class);
 
@@ -81,21 +72,15 @@ public class UserIntegrationTests {
     @Owner("Rahul Bohara")
     @Description("Verify that the user can be updated")
     public void testUpdateUser(ITestContext iTestContext) {
-        var id = (String) iTestContext.getAttribute("id");
+        var id = (Integer) iTestContext.getAttribute("id");
         var updated_user = new User(
-                "Allasani Pedessana",
-                "allasani_pedessana@test.com",
-                "male",
+                "Jane",
+                "jane@test.com",
+                "female",
                 "active"
         );
 
-        response = given()
-                .baseUri("https://gorest.co.in/public/v2/users")
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer c40da3c265404cce4faa7630c1900fb093833bfff182e24f453737a1dcfb7d48")
-                .body(updated_user)
-                .when()
-                .put(id);
+        response = UserApi.put(id, updated_user);
 
         var expected_user = response.as(User.class);
 
@@ -109,13 +94,9 @@ public class UserIntegrationTests {
     @Test(groups = "integration", dependsOnMethods = "testUpdateUser")
     @Owner("Rahul Bohara")
     @Description("Verify that the user can be deleted")
-    public void testDeleteUser() {
-        response = given().baseUri("https://gorest.co.in/public/v2/users")
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer c40da3c265404cce4faa7630c1900fb093833bfff182e24f453737a1dcfb7d48")
-                .when()
-                .delete("/3681803");
-
+    public void testDeleteUser(ITestContext iTestContext) {
+        var id = (Integer) iTestContext.getAttribute("id");
+        response = UserApi.delete(id);
         assertThat(response.statusCode(), equalTo(204));
     }
 }
